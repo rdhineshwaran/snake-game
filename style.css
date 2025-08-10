@@ -1,0 +1,44 @@
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    
+    .game-container {
+        box-sizing: border-box;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        margin: 10px;
+        border: 10px solid #000;
+    }
+    .snake-body, .fuel-container {
+        position: absolute;
+        display: flex; /* keep cells in a row */
+    }
+    .fuel-container .fuel{
+        animation: blinker 1s linear infinite;
+        border-radius: 10px;
+    }
+    .snake-body{
+        gap: 2px; /* space between cells */
+    }
+    .snake-cell {
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+    }
+         
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+    
